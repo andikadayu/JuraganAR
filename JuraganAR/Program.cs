@@ -19,11 +19,11 @@ namespace JuraganAR
             LoginData logindata = new LoginData();
             if (!logindata.has_Login())
             {
-                Application.Run(new Login());
+                Application.Run(new Login()); // require login first
             }
             else
             {
-                Application.Run(new Login());
+                Application.Run(new Login()); // if has login
             }
         }
     }
