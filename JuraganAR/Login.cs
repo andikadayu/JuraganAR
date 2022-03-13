@@ -52,6 +52,10 @@ namespace JuraganAR
 
                             LoginData loginData = new LoginData();
                             loginData.setLogin(names, emails);
+                            this.Hide();
+                            var homePage = new HomePage();
+                            homePage.FormClosed += (s, args) => this.Close();
+                            homePage.Show();
 
                         }
                         else

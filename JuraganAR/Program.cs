@@ -17,14 +17,15 @@ namespace JuraganAR
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginData logindata = new LoginData();
-            if (!logindata.has_Login())
-            {
-                Application.Run(new Login()); // require login first
-            }
-            else
-            {
-                Application.Run(new Login()); // if has login
-            }
+            //if (!logindata.has_Login())
+            //{
+            //    Application.Run(new Login());
+            //}
+            //else
+            //{
+            //    Application.Run(new HomePage());
+            //}
+            Application.Run(new HomePage()); // for development only
         }
     }
 }
