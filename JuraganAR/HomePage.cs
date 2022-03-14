@@ -17,6 +17,12 @@ namespace JuraganAR
             InitializeComponent();
         }
 
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            var settingPage = new SettingPage();
+            settingPage.Show();
+        }
+
         private void btnAbout_Click(object sender, EventArgs e)
         {
             var aboutPage = new AboutPage();
@@ -46,6 +52,7 @@ namespace JuraganAR
             {
                 progScrap.Value = i;
             }
+            
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -56,5 +63,7 @@ namespace JuraganAR
                 progExport.Value = i;
             }
         }
+
+        
     }
 }
