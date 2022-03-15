@@ -121,22 +121,10 @@ namespace JuraganAR.models {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string markup_method {
-            get {
-                return ((string)(this["markup_method"]));
-            }
-            set {
-                this["markup_method"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int markup_value {
+        public string markup_value {
             get {
-                return ((int)(this["markup_value"]));
+                return ((string)(this["markup_value"]));
             }
             set {
                 this["markup_value"] = value;

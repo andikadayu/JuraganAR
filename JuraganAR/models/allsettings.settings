@@ -26,10 +26,7 @@
     <Setting Name="kategori" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="markup_method" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="markup_value" Type="System.Int32" Scope="User">
+    <Setting Name="markup_value" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="with_rumus" Type="System.Boolean" Scope="User">

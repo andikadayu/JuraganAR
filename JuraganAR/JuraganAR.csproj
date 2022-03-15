@@ -108,6 +108,7 @@
       <DependentUpon>allsettings.settings</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="models\RumusHelper.cs" />
     <Compile Include="models\SQLController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
