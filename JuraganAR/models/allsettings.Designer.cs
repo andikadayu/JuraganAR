@@ -202,5 +202,29 @@ namespace JuraganAR.models {
                 this["min_harga"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string rumus_value {
+            get {
+                return ((string)(this["rumus_value"]));
+            }
+            set {
+                this["rumus_value"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool with_markup {
+            get {
+                return ((bool)(this["with_markup"]));
+            }
+            set {
+                this["with_markup"] = value;
+            }
+        }
     }
 }
