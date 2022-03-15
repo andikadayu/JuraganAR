@@ -84,6 +84,7 @@
             this.btnData.TabIndex = 3;
             this.btnData.Text = "Data";
             this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
             // label1
             // 

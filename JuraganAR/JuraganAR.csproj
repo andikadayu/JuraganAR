@@ -89,6 +89,12 @@
     <Compile Include="AboutPage.Designer.cs">
       <DependentUpon>AboutPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataPage.Designer.cs">
+      <DependentUpon>DataPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="AboutPage.resx">
       <DependentUpon>AboutPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataPage.resx">
+      <DependentUpon>DataPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>

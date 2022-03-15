@@ -14,7 +14,7 @@ namespace JuraganAR.models
         private static SQLiteConnection open_connection()
         {
             SQLiteConnection connect;
-            connect = new SQLiteConnection("Data Source=scrapping.db;Version=3;Compress=True;");
+            connect = new SQLiteConnection("Data Source=models/scrapping.db;Version=3;");
             try
             {
                 connect.Open();
@@ -108,7 +108,7 @@ namespace JuraganAR.models
 
             while (data_reader.Read())
             {
-                result =  data_reader.GetString(0);
+                result =  data_reader.GetInt64(0).ToString();
             }
 
             close_connection();

@@ -17,6 +17,12 @@ namespace JuraganAR
             InitializeComponent();
         }
 
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            var dataPage = new DataPage();
+            dataPage.Show();
+        }
+
         private void btnSetting_Click(object sender, EventArgs e)
         {
             var settingPage = new SettingPage();
