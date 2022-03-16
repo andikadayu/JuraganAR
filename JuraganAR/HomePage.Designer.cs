@@ -92,9 +92,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(13, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.Size = new System.Drawing.Size(311, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Scrap Link";
+            this.label1.Text = "Scrap Link - Dipisah dengan koma";
             // 
             // txtLink
             // 

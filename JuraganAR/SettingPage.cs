@@ -32,14 +32,21 @@ namespace JuraganAR
 
             cbMarkup.Checked = allsettings.Default.with_markup;
             cbRumus.Checked = allsettings.Default.with_rumus;
+            if(allsettings.Default.rumus_value.ToString() != "")
+            {
+                comboRumus.SelectedItem = allsettings.Default.rumus_value;
+            }
+            else
+            {
+                comboRumus.SelectedItem = "Murah";
+            }
 
-            comboRumus.SelectedItem = allsettings.Default.rumus_value;
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var questions = MessageBox.Show("Are you sure to Clear All Data?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            var questions = MessageBox.Show("Are you sure to save this setting?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (questions.ToString() == "Yes")
             {
                 SaveSetting();
@@ -65,7 +72,11 @@ namespace JuraganAR
             allsettings.Default.with_markup = cbMarkup.Checked;
             allsettings.Default.with_rumus = cbRumus.Checked;
 
+           
             allsettings.Default.rumus_value = comboRumus.SelectedItem.ToString();
+            
+
+            allsettings.Default.Save();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -193,7 +193,7 @@ namespace JuraganAR.models {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Murah")]
         public string rumus_value {
             get {
                 return ((string)(this["rumus_value"]));

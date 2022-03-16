@@ -52,6 +52,7 @@ namespace JuraganAR
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
+            var link = txtLink.Text.Trim();
             progScrap.Visible = true;
 
             for(int i = 1; i <= 100; i++)
@@ -68,6 +69,9 @@ namespace JuraganAR
             {
                 progExport.Value = i;
             }
+
+            var filename = txtFileName.Text.Trim();
+
         }
 
         
