@@ -17,13 +17,13 @@
     <Setting Name="remove_text" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="preorder" Type="System.Int32" Scope="User">
+    <Setting Name="preorder" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="etalase" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="kategori" Type="System.Int32" Scope="User">
+    <Setting Name="kategori" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="markup_value" Type="System.String" Scope="User">
@@ -32,16 +32,16 @@
     <Setting Name="with_rumus" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="weight" Type="System.Int32" Scope="User">
+    <Setting Name="weight" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="min_pesan" Type="System.Int32" Scope="User">
+    <Setting Name="min_pesan" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="min_stok" Type="System.Int32" Scope="User">
+    <Setting Name="min_stok" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="min_harga" Type="System.Int32" Scope="User">
+    <Setting Name="min_harga" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="rumus_value" Type="System.String" Scope="User">

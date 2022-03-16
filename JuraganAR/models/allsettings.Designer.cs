@@ -86,9 +86,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int preorder {
+        public string preorder {
             get {
-                return ((int)(this["preorder"]));
+                return ((string)(this["preorder"]));
             }
             set {
                 this["preorder"] = value;
@@ -110,9 +110,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int kategori {
+        public string kategori {
             get {
-                return ((int)(this["kategori"]));
+                return ((string)(this["kategori"]));
             }
             set {
                 this["kategori"] = value;
@@ -146,9 +146,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int weight {
+        public string weight {
             get {
-                return ((int)(this["weight"]));
+                return ((string)(this["weight"]));
             }
             set {
                 this["weight"] = value;
@@ -158,9 +158,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int min_pesan {
+        public string min_pesan {
             get {
-                return ((int)(this["min_pesan"]));
+                return ((string)(this["min_pesan"]));
             }
             set {
                 this["min_pesan"] = value;
@@ -170,9 +170,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int min_stok {
+        public string min_stok {
             get {
-                return ((int)(this["min_stok"]));
+                return ((string)(this["min_stok"]));
             }
             set {
                 this["min_stok"] = value;
@@ -182,9 +182,9 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int min_harga {
+        public string min_harga {
             get {
-                return ((int)(this["min_harga"]));
+                return ((string)(this["min_harga"]));
             }
             set {
                 this["min_harga"] = value;
