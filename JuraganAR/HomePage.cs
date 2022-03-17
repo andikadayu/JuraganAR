@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JuraganAR.models;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace JuraganAR
 {
@@ -58,6 +61,18 @@ namespace JuraganAR
             for(int i = 1; i <= 100; i++)
             {
                 progScrap.Value = i;
+            }
+
+            var shopee = new ShopeeHelper();
+            try
+            {
+                string shop = shopee.shopeeDetail(JObject.Parse(File.ReadAllText("models/shopee_response.json")));
+
+                txtLink.Text = shop;
+
+            }catch(Exception ef)
+            {
+                Console.WriteLine(ef.StackTrace);
             }
             
         }

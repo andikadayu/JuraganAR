@@ -1,0 +1,382 @@
+{
+    "error": null,
+    "error_msg": null,
+    "data": {
+        "itemid": 15711390631,
+        "shopid": 378332899,
+        "userid": 0,
+        "price_max_before_discount": -1,
+        "has_lowest_price_guarantee": false,
+        "price_before_discount": 0,
+        "price_min_before_discount": -1,
+        "exclusive_price_info": null,
+        "hidden_price_display": null,
+        "price_min": 1239500000,
+        "price_max": 2006700000,
+        "price": 1239500000,
+        "stock": 55543,
+        "discount": null,
+        "historical_sold": 6,
+        "sold": 4,
+        "show_discount": 0,
+        "raw_discount": 0,
+        "min_purchase_limit": 0,
+        "overall_purchase_limit": {
+            "order_max_purchase_limit": 0,
+            "overall_purchase_limit": null,
+            "item_overall_quota": null,
+            "start_date": null,
+            "end_date": null
+        },
+        "pack_size": null,
+        "is_live_streaming_price": null,
+        "name": "(P2S142) Rantai Stainless Steel 1.2-3mm Panjang 5m Untuk Las Diy",
+        "ctime": 1638504530,
+        "item_status": "normal",
+        "status": 1,
+        "condition": 1,
+        "catid": 100009,
+        "description": "Type: Chain\nProcessing technology: electroplating\nColor: Steel\nModel: 1.2mm [5m], 1.6mm [5m], 2.0mm [5m], 2.5mm [5m], 3.0mm [5m]\nMaterial: Stainless steel",
+        "is_mart": false,
+        "rich_text_description": null,
+        "show_shopee_verified_label": false,
+        "size_chart": null,
+        "reference_item_id": "",
+        "brand": null,
+        "item_rating": {
+            "rating_star": 5,
+            "rating_count": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ]
+        },
+        "label_ids": [
+            1000031,
+            1012446
+        ],
+        "attributes": null,
+        "liked": false,
+        "liked_count": 0,
+        "cmt_count": 1,
+        "flag": 0,
+        "shopee_verified": false,
+        "is_adult": false,
+        "is_preferred_plus_seller": false,
+        "tier_variations": [
+            {
+                "name": "color",
+                "options": [
+                    "Steel color"
+                ],
+                "images": [
+                    "bce3c2f3328afb15aac2d0c6698f553a"
+                ],
+                "properties": null,
+                "type": 0
+            },
+            {
+                "name": "Size",
+                "options": [
+                    "1.2mm【5M】",
+                    "1.6mm【5M】",
+                    "2.5mm【3M】",
+                    "2.0mm【3M】",
+                    "3.0mm【2M】"
+                ],
+                "images": null,
+                "properties": null,
+                "type": 0
+            }
+        ],
+        "bundle_deal_id": 0,
+        "can_use_bundle_deal": false,
+        "add_on_deal_info": null,
+        "bundle_deal_info": null,
+        "can_use_wholesale": false,
+        "wholesale_tier_list": [],
+        "is_group_buy_item": null,
+        "group_buy_info": null,
+        "welcome_package_type": 0,
+        "welcome_package_info": null,
+        "tax_code": null,
+        "invoice_option": null,
+        "complaint_policy": null,
+        "wp_eligibility": null,
+        "images": [
+            "a7e8a65a518444d941a8a666a63ec497",
+            "fcdec967b31cc6318fea42ae0f79f015",
+            "2c4d0a26929b439d5a687f6c8e73d9b5",
+            "7773c33d0b211a033395a871a5da087b",
+            "006192bdca9cee3e1676e1c3340147b6",
+            "47486e4b6aeaa835435006230d2d026e",
+            "40a42f79817b14482b2d971b70b6cb11",
+            "bdf7b71d5f04fada5731cad2dcac962a",
+            "04334e9c062bcf1791cc4b50321f7793"
+        ],
+        "image": "a7e8a65a518444d941a8a666a63ec497",
+        "video_info_list": null,
+        "item_type": 0,
+        "is_official_shop": false,
+        "show_official_shop_label_in_title": false,
+        "shop_location": "Luar Negeri",
+        "coin_earn_label": null,
+        "cb_option": 1,
+        "is_pre_order": false,
+        "estimated_days": 3,
+        "badge_icon_type": 0,
+        "show_free_shipping": false,
+        "shipping_icon_type": 1,
+        "cod_flag": 0,
+        "is_service_by_shopee": false,
+        "show_original_guarantee": false,
+        "categories": [
+            {
+                "catid": 100009,
+                "display_name": "Aksesoris Fashion",
+                "no_sub": false,
+                "is_default_subcat": false
+            },
+            {
+                "catid": 100035,
+                "display_name": "Set \u0026 Paket Aksesoris",
+                "no_sub": true,
+                "is_default_subcat": false
+            }
+        ],
+        "other_stock": 55543,
+        "item_has_post": false,
+        "discount_stock": 0,
+        "current_promotion_has_reserve_stock": false,
+        "current_promotion_reserved_stock": 0,
+        "normal_stock": 55543,
+        "brand_id": 0,
+        "is_alcohol_product": false,
+        "show_recycling_info": false,
+        "coin_info": {
+            "spend_cash_unit": 100000,
+            "coin_earn_items": []
+        },
+        "models": [
+            {
+                "itemid": 15711390631,
+                "status": 1,
+                "current_promotion_reserved_stock": 0,
+                "name": "Steel color,1.2mm【5M】",
+                "promotionid": 0,
+                "price": 1905900000,
+                "price_stocks": [
+                    {
+                        "allocated_stock": 0,
+                        "stock_breakdown_by_location": [
+                            {
+                                "location_id": "CNZ",
+                                "available_stock": 11111,
+                                "fulfilment_type": 2,
+                                "address_id": null
+                            }
+                        ]
+                    }
+                ],
+                "current_promotion_has_reserve_stock": false,
+                "normal_stock": 11111,
+                "extinfo": {
+                    "tier_index": [
+                        0,
+                        0
+                    ],
+                    "group_buy_info": null,
+                    "is_pre_order": null,
+                    "estimated_days": 3
+                },
+                "price_before_discount": 0,
+                "modelid": 150516457429,
+                "stock": 11111,
+                "has_gimmick_tag": false
+            },
+            {
+                "itemid": 15711390631,
+                "status": 1,
+                "current_promotion_reserved_stock": 0,
+                "name": "Steel color,2.5mm【3M】",
+                "promotionid": 0,
+                "price": 1912100000,
+                "price_stocks": [
+                    {
+                        "allocated_stock": 0,
+                        "stock_breakdown_by_location": [
+                            {
+                                "location_id": "CNZ",
+                                "available_stock": 11109,
+                                "fulfilment_type": 2,
+                                "address_id": null
+                            }
+                        ]
+                    }
+                ],
+                "current_promotion_has_reserve_stock": false,
+                "normal_stock": 11109,
+                "extinfo": {
+                    "tier_index": [
+                        0,
+                        2
+                    ],
+                    "group_buy_info": null,
+                    "is_pre_order": null,
+                    "estimated_days": 3
+                },
+                "price_before_discount": 0,
+                "modelid": 150516457430,
+                "stock": 11109,
+                "has_gimmick_tag": false
+            },
+            {
+                "itemid": 15711390631,
+                "status": 1,
+                "current_promotion_reserved_stock": 0,
+                "name": "Steel color,3.0mm【2M】",
+                "promotionid": 0,
+                "price": 1639700000,
+                "price_stocks": [
+                    {
+                        "allocated_stock": 0,
+                        "stock_breakdown_by_location": [
+                            {
+                                "location_id": "CNZ",
+                                "available_stock": 11106,
+                                "fulfilment_type": 2,
+                                "address_id": null
+                            }
+                        ]
+                    }
+                ],
+                "current_promotion_has_reserve_stock": false,
+                "normal_stock": 11106,
+                "extinfo": {
+                    "tier_index": [
+                        0,
+                        4
+                    ],
+                    "group_buy_info": null,
+                    "is_pre_order": null,
+                    "estimated_days": 3
+                },
+                "price_before_discount": 0,
+                "modelid": 150516457431,
+                "stock": 11106,
+                "has_gimmick_tag": false
+            },
+            {
+                "itemid": 15711390631,
+                "status": 1,
+                "current_promotion_reserved_stock": 0,
+                "name": "Steel color,1.6mm【5M】",
+                "promotionid": 0,
+                "price": 2006700000,
+                "price_stocks": [
+                    {
+                        "allocated_stock": 0,
+                        "stock_breakdown_by_location": [
+                            {
+                                "location_id": "CNZ",
+                                "available_stock": 11110,
+                                "fulfilment_type": 2,
+                                "address_id": null
+                            }
+                        ]
+                    }
+                ],
+                "current_promotion_has_reserve_stock": false,
+                "normal_stock": 11110,
+                "extinfo": {
+                    "tier_index": [
+                        0,
+                        1
+                    ],
+                    "group_buy_info": null,
+                    "is_pre_order": null,
+                    "estimated_days": 3
+                },
+                "price_before_discount": 0,
+                "modelid": 150516457432,
+                "stock": 11110,
+                "has_gimmick_tag": false
+            },
+            {
+                "itemid": 15711390631,
+                "status": 1,
+                "current_promotion_reserved_stock": 0,
+                "name": "Steel color,2.0mm【3M】",
+                "promotionid": 0,
+                "price": 1239500000,
+                "price_stocks": [
+                    {
+                        "allocated_stock": 0,
+                        "stock_breakdown_by_location": [
+                            {
+                                "location_id": "CNZ",
+                                "available_stock": 11107,
+                                "fulfilment_type": 2,
+                                "address_id": null
+                            }
+                        ]
+                    }
+                ],
+                "current_promotion_has_reserve_stock": false,
+                "normal_stock": 11107,
+                "extinfo": {
+                    "tier_index": [
+                        0,
+                        3
+                    ],
+                    "group_buy_info": null,
+                    "is_pre_order": null,
+                    "estimated_days": 3
+                },
+                "price_before_discount": 0,
+                "modelid": 150516457433,
+                "stock": 11107,
+                "has_gimmick_tag": false
+            }
+        ],
+        "spl_info": {
+            "installment_info": null,
+            "user_credit_info": null,
+            "channel_id": null,
+            "show_spl": false,
+            "show_spl_lite": false
+        },
+        "preview_info": null,
+        "fe_categories": [
+            {
+                "catid": 11042921,
+                "display_name": "Aksesoris Fashion",
+                "no_sub": false,
+                "is_default_subcat": false
+            },
+            {
+                "catid": 11042976,
+                "display_name": "Set \u0026 Paket Aksesoris",
+                "no_sub": true,
+                "is_default_subcat": false
+            }
+        ],
+        "presale_info": null,
+        "is_cc_installment_payment_eligible": false,
+        "is_non_cc_installment_payment_eligible": false,
+        "flash_sale": null,
+        "upcoming_flash_sale": null,
+        "deep_discount": null,
+        "has_low_fulfillment_rate": false,
+        "is_partial_fulfilled": false,
+        "makeups": null,
+        "shop_vouchers": null,
+        "global_sold": 4,
+        "is_infant_milk_formula_product": false,
+        "should_show_amp_tag": true
+    },
+    "is_indexable": true
+}
