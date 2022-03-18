@@ -33,7 +33,6 @@ namespace JuraganAR
                     var url = "https://juraganar.com/api/login_desktop.php?email="+email+"&password="+password;
 
                     var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-          
 
                     var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))

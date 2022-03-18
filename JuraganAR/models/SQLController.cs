@@ -21,6 +21,7 @@ namespace JuraganAR.models
             }
             catch(Exception e)
             {
+                System.Windows.Forms.MessageBox.Show(e.Message);
                 Console.WriteLine(e.StackTrace);
             }
 
