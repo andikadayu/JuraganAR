@@ -30,6 +30,7 @@ namespace JuraganAR.models
             {
                 profit = int.Parse(result);
             }
+            sql.close_connection();
 
             return profit;
 

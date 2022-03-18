@@ -27,7 +27,7 @@ namespace JuraganAR.models
             return connect;
         }
 
-        private void close_connection()
+        public void close_connection()
         {
             conn.Close();
         }
@@ -65,9 +65,7 @@ namespace JuraganAR.models
             cmd = conn.CreateCommand();
             cmd.CommandText = sql;
             data_reader = cmd.ExecuteReader();
-
-            close_connection();
-
+            
             return data_reader;
 
         }

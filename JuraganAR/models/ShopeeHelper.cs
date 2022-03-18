@@ -32,7 +32,7 @@ namespace JuraganAR.models
             }
         }
 
-        public string shopeeDetail(JObject result)
+        public void shopeeDetail(JObject result)
         {
             string shopid = result["data"]["shopid"].ToString();
             string itemid = result["data"]["itemid"].ToString();
@@ -56,8 +56,6 @@ namespace JuraganAR.models
             var sql = new SQLController();
             sql.insert_database("tb_detail", $"(NULL,'{satu}','{links}','{nama}','{deskripsi}','{catid}','{kosong}','{satu}','{kosong}','{satu}','{kondisi}','{imageArray}',NULL,'{sku}','{status}','{stok}','{harga}','{asuransi}')");
 
-
-            return  links;
         }
 
     }

@@ -43,6 +43,7 @@ namespace JuraganAR
                         var res = JObject.Parse(result);
 
                         var status = res.GetValue("status").ToString();
+                        var ids = res.GetValue("ids").ToString();
                         var emails = res.GetValue("email").ToString();
                         var names = res.GetValue("name").ToString();
 
@@ -51,7 +52,7 @@ namespace JuraganAR
                             MessageBox.Show("Login Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             LoginData loginData = new LoginData();
-                            loginData.setLogin(names, emails);
+                            loginData.setLogin(ids,names, emails);
                             this.Hide();
                             var homePage = new HomePage();
                             homePage.FormClosed += (s, args) => this.Close();

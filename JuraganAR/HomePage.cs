@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JuraganAR.models;
-using Newtonsoft.Json.Linq;
-using System.IO;
 
 namespace JuraganAR
 {
@@ -18,6 +16,11 @@ namespace JuraganAR
         public HomePage()
         {
             InitializeComponent();
+            LoginData login = new LoginData();
+            if (!login.has_Login() && !login.is_active())
+            {
+                goLogout();
+            }
         }
 
         private void btnData_Click(object sender, EventArgs e)
@@ -43,36 +46,57 @@ namespace JuraganAR
             var questions = MessageBox.Show("Are you sure to Logout?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if(questions.ToString() == "Yes")
             {
-                var log = new LoginData();
-                log.Logout();
-                this.Hide();
-                var loginPage = new Login();
-                loginPage.FormClosed += (s, args) => this.Close();
-                loginPage.Show();
-                
+                goLogout();
             }
+        }
+
+        private void goLogout()
+        {
+            var log = new LoginData();
+            log.Logout();
+            this.Hide();
+            var loginPage = new Login();
+            loginPage.FormClosed += (s, args) => this.Close();
+            loginPage.Show();
         }
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
-            var link = txtLink.Text.Trim();
-            progScrap.Visible = true;
-
-            for(int i = 1; i <= 100; i++)
+            string link = txtLink.Text.Trim();
+            if(link != "")
             {
-                progScrap.Value = i;
+                progScrap.Visible = true;
+
+                string[] allLinks = link.Split(',');
+                int counts = allLinks.Length;
+                int curr = 0;
+                int progress = 0;
+
+                foreach (var lins in allLinks)
+                {
+                    string links = lins.Replace(@"""", String.Empty).Replace("?", ".").Replace("-i.", "~");
+
+                    string[] param = links.Split('~');
+                    string[] para = param[1].Split('.');
+                    string shopid = para[0];
+                    string itemid = para[1];
+
+                    var shopee = new ShopeeHelper();
+
+                    shopee.shopeeInit(shopid, itemid);
+
+                    curr++;
+                    progress = curr / counts * 100;
+
+                    progScrap.Value = progress;
+
+                }
+                MessageBox.Show("Scrapping Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtLink.Text = String.Empty;
             }
-
-            var shopee = new ShopeeHelper();
-            try
+            else
             {
-                string shop = shopee.shopeeDetail(JObject.Parse(File.ReadAllText("models/shopee_response.json")));
-
-                txtLink.Text = shop;
-
-            }catch(Exception ef)
-            {
-                Console.WriteLine(ef.StackTrace);
+                MessageBox.Show("Invalid Form", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -80,12 +104,45 @@ namespace JuraganAR
         private void btnExport_Click(object sender, EventArgs e)
         {
             progExport.Visible = true;
-            for (int i = 1; i <= 100; i++)
-            {
-                progExport.Value = i;
-            }
+            var sql = new SQLController();
+            int total = int.Parse(sql.get_count("tb_detail", "*"));
+            int f = 0;
+
 
             var filename = txtFileName.Text.Trim();
+
+            if(filename != "" && total > 0)
+            {
+                while (f < total)
+                {
+                    if(f % 299 == 0)
+                    {
+                        try
+                        {
+                            var excel = new ExcelController();
+                            var result = sql.read_database("tb_detail", "*", "", "", "", "299", f.ToString());
+                            excel.create_excel("299", f.ToString(), filename,result);
+                            sql.close_connection();
+
+                        }catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                            MessageBox.Show(ex.Message);
+                        }
+
+                    }
+                        if(f == total - 1)
+                        {
+                            MessageBox.Show("Export Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        f++;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Form", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
