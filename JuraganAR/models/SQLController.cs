@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.IO;
 
 namespace JuraganAR.models
 {
     class SQLController
     {
         SQLiteConnection conn;
+        static string lokasi = Path.GetFullPath("models/scrapping.db");
 
         private static SQLiteConnection open_connection()
         {
             SQLiteConnection connect;
-            connect = new SQLiteConnection("Data Source=models/scrapping.db;Version=3;");
+            connect = new SQLiteConnection($"Data Source={lokasi};Version=3;");
             try
             {
                 connect.Open();

@@ -9,6 +9,8 @@ namespace JuraganAR.models
     {
         public void shopeeInit(string shopid,string itemid)
         {
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             int version = new Random().Next(7, 999999999);
             try
             {
@@ -16,6 +18,8 @@ namespace JuraganAR.models
                 var url = "https://shopee.co.id/api/v4/item/get?itemid=" + itemid + "&shopid=" + shopid + "&version=" + version;
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.UseDefaultCredentials = true;
+                httpRequest.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
                 var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
@@ -28,7 +32,7 @@ namespace JuraganAR.models
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine(ex.Message+" "+shopid+" "+itemid+"\n"+ex.StackTrace);
             }
         }
 

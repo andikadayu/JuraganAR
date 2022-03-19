@@ -74,16 +74,19 @@ namespace JuraganAR
 
                 foreach (var lins in allLinks)
                 {
-                    string links = lins.Replace(@"""", String.Empty).Replace("?", ".").Replace("-i.", "~");
+                    if(lins != "")
+                    {
+                        string links = lins.Replace(@"""", String.Empty).Replace("?", ".").Replace("-i.", "~");
 
-                    string[] param = links.Split('~');
-                    string[] para = param[1].Split('.');
-                    string shopid = para[0];
-                    string itemid = para[1];
+                        string[] param = links.Split('~');
+                        string[] para = param[1].Split('.');
+                        string shopid = para[0];
+                        string itemid = para[1];
 
-                    var shopee = new ShopeeHelper();
+                        var shopee = new ShopeeHelper();
 
-                    shopee.shopeeInit(shopid, itemid);
+                        shopee.shopeeInit(shopid, itemid);
+                    }
 
                     curr++;
                     progress = curr / counts * 100;
@@ -107,12 +110,13 @@ namespace JuraganAR
             var sql = new SQLController();
             int total = int.Parse(sql.get_count("tb_detail", "*"));
             int f = 0;
-
+            int progress = 0;
 
             var filename = txtFileName.Text.Trim();
 
             if(filename != "" && total > 0)
             {
+                progExport.Visible = true;
                 while (f < total)
                 {
                     if(f % 299 == 0)
@@ -137,6 +141,10 @@ namespace JuraganAR
                         }
 
                         f++;
+                    
+                    progress = f / total * 100;
+
+                    progExport.Value = progress;
                 }
             }
             else
