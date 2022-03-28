@@ -41,6 +41,8 @@
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.progExport = new System.Windows.Forms.ProgressBar();
+            this.WorkerScrap = new System.ComponentModel.BackgroundWorker();
+            this.WorkerExport = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -164,6 +166,20 @@
             this.progExport.TabIndex = 11;
             this.progExport.Visible = false;
             // 
+            // WorkerScrap
+            // 
+            this.WorkerScrap.WorkerReportsProgress = true;
+            this.WorkerScrap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WorkerScrap_DoWork);
+            this.WorkerScrap.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.WorkerScrap_ProgressChanged);
+            this.WorkerScrap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WorkerScrap_RunWorkerCompleted);
+            // 
+            // WorkerExport
+            // 
+            this.WorkerExport.WorkerReportsProgress = true;
+            this.WorkerExport.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WorkerExport_DoWork);
+            this.WorkerExport.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.WorkerExport_ProgressChanged);
+            this.WorkerExport.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WorkerExport_RunWorkerCompleted);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,5 +221,7 @@
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.ProgressBar progExport;
+        private System.ComponentModel.BackgroundWorker WorkerScrap;
+        private System.ComponentModel.BackgroundWorker WorkerExport;
     }
 }

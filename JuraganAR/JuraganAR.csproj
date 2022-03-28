@@ -170,6 +170,7 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>allsettings.settings</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="models\ExcelController.cs" />
     <Compile Include="models\RumusHelper.cs" />
@@ -211,10 +212,10 @@
     <None Include="models\allsettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>allsettings.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="models\scrapping.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="models\templetes.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

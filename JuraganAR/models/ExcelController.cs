@@ -23,7 +23,10 @@ namespace JuraganAR.models
             string[] removes = allsettings.Default.remove_text.ToString().Trim().Split(',');
             foreach(var rms in removes)
             {
-                sb.Replace(rms, String.Empty);
+                if(rms != "" || rms != String.Empty)
+                {
+                    sb.Replace(rms, String.Empty);
+                }
             }
 
             return sb.ToString();
