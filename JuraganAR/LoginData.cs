@@ -2,43 +2,48 @@
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using JuraganAR.models;
 namespace JuraganAR
 {
     class LoginData
     {
-        static string name;
-        static string email;
-        static string ids;
-        static bool isLogin = false;
-
+       
         public void setLogin(string idss,string names, string emails)
         {
-            name = names;
-            email = emails;
-            isLogin = true;
-            ids = idss;
+            sharedsession.Default.name = names;
+            sharedsession.Default.email = emails;
+            sharedsession.Default.id = idss;
+            sharedsession.Default.is_login = true;
+            sharedsession.Default.Save();
         }
 
         public void Logout()
         {
-            name = null;
-            email = null;
-            isLogin = false;
+            sharedsession.Default.name = string.Empty;
+            sharedsession.Default.email = string.Empty;
+            sharedsession.Default.id = string.Empty;
+            sharedsession.Default.is_login = false;
+            sharedsession.Default.Save();
         }
 
         public string getName()
         {
-            return name;
+            return sharedsession.Default.name;
         }
 
         public string getEmail()
         {
-            return email;
+            return sharedsession.Default.email;
         }
 
         public bool has_Login()
         {
-            return isLogin;
+            return sharedsession.Default.is_login;
+        }
+
+        public string getId()
+        {
+            return sharedsession.Default.id;
         }
 
         public bool is_active()
@@ -49,7 +54,7 @@ namespace JuraganAR
             try
             {
 
-                var url = "https://juraganar.com/api/cek_aktif.php?id="+ids;
+                var url = "https://juraganar.com/api/cek_aktif.php?id="+getId();
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.UseDefaultCredentials = true;

@@ -14,7 +14,9 @@ namespace JuraganAR
             InitializeComponent();
             if (!login.has_Login() || !login.is_active())
             {
-                goLogout();
+                new LoginData().Logout();
+                new Login().Show();
+                this.Hide();
             }
         }
 

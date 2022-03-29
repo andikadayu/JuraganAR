@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="JuraganAR.models" GeneratedClassName="allsettings">
   <Profiles />
   <Settings>
-    <Setting Name="add_first_name" Type="System.String" Scope="User">
+    <Setting Name="add_first_name" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="add_last_name" Type="System.String" Scope="User">

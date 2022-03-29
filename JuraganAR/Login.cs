@@ -13,6 +13,12 @@ namespace JuraganAR
             InitializeComponent();
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            if(new LoginData().has_Login())
+            {
+                var homePage = new HomePage();
+                homePage.FormClosed += (s, args) => this.Close();
+                homePage.Show();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

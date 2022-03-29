@@ -41,8 +41,22 @@ namespace JuraganAR.models
                     string[] image = result.GetValue(11).ToString().Replace(@"""", String.Empty).Replace("[", String.Empty).Replace("]", String.Empty).Replace(" ", String.Empty).Replace("\n", String.Empty).Replace("\r", String.Empty).Trim().Split(',');
 
                     sheet.SetCellValue($"A{currents}",String.Empty);
-                    sheet.SetCellValue($"B{currents}", removetext(allsettings.Default.add_first_name + result.GetValue(3).ToString() + allsettings.Default.add_last_name).Substring(0,70));
-                    sheet.SetCellValue($"C{currents}", removetext(allsettings.Default.add_first_description + result.GetValue(4).ToString() + allsettings.Default.add_last_description).Substring(0,2000));
+
+                    int maxName = 70;
+                    string name = removetext(allsettings.Default.add_first_name + result.GetValue(3).ToString() + allsettings.Default.add_last_name);
+                    if(name.Length > maxName)
+                    {
+                        name = name.Substring(0, maxName);
+                    }
+                    int maxDesc = 2000;
+                    string desc = removetext(allsettings.Default.add_first_description + result.GetValue(4).ToString() + allsettings.Default.add_last_description);
+                    if(desc.Length > maxDesc)
+                    {
+                        desc = desc.Substring(0, maxDesc);
+                    }
+
+                    sheet.SetCellValue($"B{currents}", name);
+                    sheet.SetCellValue($"C{currents}", desc);
                     sheet.SetCellValue($"D{currents}", allsettings.Default.kategori);
                     sheet.SetCellValue($"E{currents}", allsettings.Default.weight);
                     sheet.SetCellValue($"F{currents}", allsettings.Default.min_pesan);

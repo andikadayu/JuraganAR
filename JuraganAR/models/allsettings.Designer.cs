@@ -13,7 +13,7 @@ namespace JuraganAR.models {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
-    internal sealed partial class allsettings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class allsettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static allsettings defaultInstance = ((allsettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new allsettings())));
         
@@ -26,6 +26,7 @@ namespace JuraganAR.models {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string add_first_name {
             get {
                 return ((string)(this["add_first_name"]));
