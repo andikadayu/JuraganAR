@@ -25,6 +25,7 @@ namespace JuraganAR
             {
                 Application.Run(new HomePage());
             }
+            
         }
     }
 }

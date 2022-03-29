@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using JuraganAR.models;
 using System.Threading;
@@ -16,9 +10,9 @@ namespace JuraganAR
     {
         public HomePage()
         {
-            InitializeComponent();
             LoginData login = new LoginData();
-            if (!login.has_Login() && !login.is_active())
+            InitializeComponent();
+            if (!login.has_Login() || !login.is_active())
             {
                 goLogout();
             }
@@ -130,7 +124,7 @@ namespace JuraganAR
                     {
                         try
                         {
-                            string links = lins.Replace(@"""", String.Empty).Replace("?", ".").Replace("~","-").Replace("-i.", "~");
+                            string links = lins.Replace(@"""", String.Empty).Replace(" ",String.Empty).Replace("?", ".").Replace("~","-").Replace("-i.", "~");
 
                             string[] param = links.Split('~');
                             string[] para = param[1].Split('.');

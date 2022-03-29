@@ -44,12 +44,16 @@ namespace JuraganAR
         public bool is_active()
         {
             bool condition = false;
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
 
                 var url = "https://juraganar.com/api/cek_aktif.php?id="+ids;
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.UseDefaultCredentials = true;
+                httpRequest.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
                 var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {

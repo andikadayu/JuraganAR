@@ -66,6 +66,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSave.Location = new System.Drawing.Point(1150, 634);
             this.btnSave.Name = "btnSave";
@@ -77,6 +78,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnClose.Location = new System.Drawing.Point(24, 634);
             this.btnClose.Name = "btnClose";
@@ -88,6 +90,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label3.Location = new System.Drawing.Point(26, 9);
@@ -98,6 +102,8 @@
             // 
             // txtAwalProduk
             // 
+            this.txtAwalProduk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAwalProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtAwalProduk.Location = new System.Drawing.Point(29, 39);
             this.txtAwalProduk.Name = "txtAwalProduk";
@@ -107,6 +113,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label4.Location = new System.Drawing.Point(26, 115);
@@ -117,6 +125,8 @@
             // 
             // txtAkhirProduk
             // 
+            this.txtAkhirProduk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAkhirProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtAkhirProduk.Location = new System.Drawing.Point(29, 147);
             this.txtAkhirProduk.Name = "txtAkhirProduk";
@@ -126,6 +136,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label5.Location = new System.Drawing.Point(28, 226);
@@ -136,6 +148,8 @@
             // 
             // txtAwalDeskripsi
             // 
+            this.txtAwalDeskripsi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAwalDeskripsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtAwalDeskripsi.Location = new System.Drawing.Point(29, 255);
             this.txtAwalDeskripsi.Name = "txtAwalDeskripsi";
@@ -145,9 +159,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(28, 333);
+            this.label1.Location = new System.Drawing.Point(28, 329);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 18);
             this.label1.TabIndex = 10;
@@ -155,6 +171,8 @@
             // 
             // txtAkhirDeskripsi
             // 
+            this.txtAkhirDeskripsi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAkhirDeskripsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtAkhirDeskripsi.Location = new System.Drawing.Point(31, 354);
             this.txtAkhirDeskripsi.Name = "txtAkhirDeskripsi";
@@ -164,6 +182,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label2.Location = new System.Drawing.Point(28, 430);
@@ -174,6 +194,8 @@
             // 
             // txtHapusKata
             // 
+            this.txtHapusKata.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHapusKata.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtHapusKata.Location = new System.Drawing.Point(29, 457);
             this.txtHapusKata.Name = "txtHapusKata";
@@ -183,6 +205,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label6.Location = new System.Drawing.Point(525, 9);
@@ -193,6 +216,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label7.Location = new System.Drawing.Point(765, 9);
@@ -203,6 +227,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label8.Location = new System.Drawing.Point(998, 9);
@@ -213,6 +238,7 @@
             // 
             // txtPreorder
             // 
+            this.txtPreorder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreorder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtPreorder.Location = new System.Drawing.Point(528, 39);
             this.txtPreorder.Name = "txtPreorder";
@@ -221,6 +247,7 @@
             // 
             // txtEtalase
             // 
+            this.txtEtalase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEtalase.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtEtalase.Location = new System.Drawing.Point(768, 39);
             this.txtEtalase.Name = "txtEtalase";
@@ -229,6 +256,7 @@
             // 
             // txtKategori
             // 
+            this.txtKategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtKategori.Location = new System.Drawing.Point(1001, 39);
             this.txtKategori.Name = "txtKategori";
@@ -237,6 +265,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label9.Location = new System.Drawing.Point(525, 97);
@@ -247,6 +276,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label10.Location = new System.Drawing.Point(947, 97);
@@ -257,6 +287,7 @@
             // 
             // cbMarkup
             // 
+            this.cbMarkup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMarkup.AutoSize = true;
             this.cbMarkup.Location = new System.Drawing.Point(528, 136);
             this.cbMarkup.Name = "cbMarkup";
@@ -266,6 +297,7 @@
             // 
             // cbRumus
             // 
+            this.cbRumus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRumus.AutoSize = true;
             this.cbRumus.Location = new System.Drawing.Point(929, 136);
             this.cbRumus.Name = "cbRumus";
@@ -275,6 +307,7 @@
             // 
             // txtMarkup
             // 
+            this.txtMarkup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMarkup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtMarkup.Location = new System.Drawing.Point(560, 129);
             this.txtMarkup.Name = "txtMarkup";
@@ -283,15 +316,18 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label11.Location = new System.Drawing.Point(525, 168);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(353, 13);
+            this.label11.Size = new System.Drawing.Size(468, 17);
             this.label11.TabIndex = 25;
             this.label11.Text = "Masukkan Nilai Markup untuk tipe persen tambahkan seperti contoh 20%";
             // 
             // comboRumus
             // 
+            this.comboRumus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboRumus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboRumus.FormattingEnabled = true;
             this.comboRumus.Items.AddRange(new object[] {
@@ -305,6 +341,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label12.Location = new System.Drawing.Point(525, 226);
@@ -315,6 +352,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label13.Location = new System.Drawing.Point(765, 226);
@@ -325,6 +363,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label14.Location = new System.Drawing.Point(998, 226);
@@ -335,6 +374,7 @@
             // 
             // txtBerat
             // 
+            this.txtBerat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBerat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtBerat.Location = new System.Drawing.Point(528, 268);
             this.txtBerat.Name = "txtBerat";
@@ -343,6 +383,7 @@
             // 
             // txtMinPesan
             // 
+            this.txtMinPesan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMinPesan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtMinPesan.Location = new System.Drawing.Point(768, 268);
             this.txtMinPesan.Name = "txtMinPesan";
@@ -351,6 +392,7 @@
             // 
             // txtMinStok
             // 
+            this.txtMinStok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMinStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtMinStok.Location = new System.Drawing.Point(1001, 268);
             this.txtMinStok.Name = "txtMinStok";
@@ -359,6 +401,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label15.Location = new System.Drawing.Point(525, 333);
@@ -369,6 +412,7 @@
             // 
             // txtMinHarga
             // 
+            this.txtMinHarga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMinHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtMinHarga.Location = new System.Drawing.Point(528, 367);
             this.txtMinHarga.Name = "txtMinHarga";
@@ -379,6 +423,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.txtMinHarga);
             this.Controls.Add(this.label15);
@@ -414,11 +459,11 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SettingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JuraganAR Setting";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

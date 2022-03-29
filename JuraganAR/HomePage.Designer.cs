@@ -47,6 +47,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnLogout.Location = new System.Drawing.Point(1144, 12);
             this.btnLogout.Name = "btnLogout";
@@ -58,6 +59,7 @@
             // 
             // btnAbout
             // 
+            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAbout.Location = new System.Drawing.Point(1030, 12);
             this.btnAbout.Name = "btnAbout";
@@ -69,6 +71,7 @@
             // 
             // btnSetting
             // 
+            this.btnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSetting.Location = new System.Drawing.Point(916, 12);
             this.btnSetting.Name = "btnSetting";
@@ -80,6 +83,7 @@
             // 
             // btnData
             // 
+            this.btnData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnData.Location = new System.Drawing.Point(802, 12);
             this.btnData.Name = "btnData";
@@ -101,6 +105,8 @@
             // 
             // txtLink
             // 
+            this.txtLink.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtLink.Location = new System.Drawing.Point(18, 83);
             this.txtLink.Name = "txtLink";
@@ -110,6 +116,9 @@
             // 
             // progScrap
             // 
+            this.progScrap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progScrap.ForeColor = System.Drawing.Color.LimeGreen;
             this.progScrap.Location = new System.Drawing.Point(18, 321);
             this.progScrap.Name = "progScrap";
             this.progScrap.Size = new System.Drawing.Size(1234, 23);
@@ -119,6 +128,8 @@
             // 
             // btnProcess
             // 
+            this.btnProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnProcess.Location = new System.Drawing.Point(18, 350);
             this.btnProcess.Name = "btnProcess";
@@ -140,6 +151,8 @@
             // 
             // txtFileName
             // 
+            this.txtFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtFileName.Location = new System.Drawing.Point(18, 466);
             this.txtFileName.Name = "txtFileName";
@@ -148,6 +161,8 @@
             // 
             // btnExport
             // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnExport.Location = new System.Drawing.Point(12, 540);
             this.btnExport.Name = "btnExport";
@@ -159,6 +174,9 @@
             // 
             // progExport
             // 
+            this.progExport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progExport.ForeColor = System.Drawing.Color.LimeGreen;
             this.progExport.Location = new System.Drawing.Point(12, 511);
             this.progExport.Name = "progExport";
             this.progExport.Size = new System.Drawing.Size(1234, 23);
@@ -184,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.progExport);
             this.Controls.Add(this.btnExport);
@@ -198,10 +217,11 @@
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnLogout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JuraganAR";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

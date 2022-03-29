@@ -20,6 +20,7 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.EF6.dll" Value="..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.Linq.dll" Value="..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.dll" Value="..\packages\System.Data.SQLite.x64.1.0.115.5\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_allsettings.Designer.cs" Value="..\JuraganAR\bin\Release\models"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_allsettings.settings" Value="..\JuraganAR\bin\Release\models"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_juraganarlogo.jpg" Value="..\JuraganAR\bin\Release\assets"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_juraganarlogo256x256.ico" Value="..\JuraganAR\bin\Release\assets"/>
@@ -38,6 +39,7 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.EF6.dll" Value="System.Data.SQLite.EF6.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.Linq.dll" Value="System.Data.SQLite.Linq.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.dll" Value="System.Data.SQLite.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_allsettings.Designer.cs" Value="allsettings.Designer.cs"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_allsettings.settings" Value="allsettings.settings"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_juraganarlogo.jpg" Value="juraganarlogo.jpg"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_juraganarlogo256x256.ico" Value="juraganarlogo [256x256].ico"/>
@@ -47,14 +49,17 @@
     <ROW Property="AI_RUN_AS_ADMIN" Value="1"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="Apps For Scrapping Shopee" ValueLocId="*"/>
-    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/andikadayu/JuraganAR"/>
+    <ROW Property="ARPHELPLINK" Value="https://github.com/andikadayu/"/>
+    <ROW Property="ARPPRODUCTICON" Value="AI_PROPPATH_FILENAME_PERBUILD_JuraganAR.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://juraganar.com"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="https://tools.juraganar.com"/>
     <ROW Property="AiPreventAutoPin" Value="System.AppUserModel.ExcludeFromShowInNewInstall"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="Karpeldevtech"/>
-    <ROW Property="ProductCode" Value="1033:{F21FF377-26F4-429F-83B9-3C62217A12CC} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F0C7BAA0-A47E-4C16-8E60-A657EA5BDA93} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="JuraganAR"/>
-    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="ProductVersion" Value="1.0.0.1"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{6EC66E73-3579-4869-8DB9-3707CEFC48C6}"/>
@@ -111,6 +116,7 @@
     <ROW File="System.Data.SQLite.dll" Component_="JuraganAR_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Data.SQLite.dll&gt;" SelfReg="false"/>
     <ROW File="DocumentFormat.OpenXml.dll" Component_="JuraganAR_References" FileName="DOCUME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DocumentFormat.OpenXml.dll&gt;" SelfReg="false"/>
     <ROW File="SpreadsheetLight.dll" Component_="JuraganAR_References" FileName="SPREAD~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_SpreadsheetLight.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_SpreadsheetLight.dll&gt;" SelfReg="false"/>
+    <ROW File="allsettings.Designer.cs" Component_="JuraganAR_ContentOutput_models" FileName="ALLSET~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_allsettings.Designer.cs]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_allsettings.Designer.cs&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.custcomp.MsiShortcutPropertyComponent">
     <ROW MsiShortcutProperty="AI_PROPPATH_FILENAME_PERBUILD_Jurag1" Shortcut_="AI_PROPPATH_FILENAME_PERBUILD_Jurag" PropertyKey="[AiPreventAutoPin]" PropVariantValue="1"/>
@@ -128,6 +134,7 @@
     <ROW Name="AI_APPPATH_PERBUILD_System.Data.SQLite.EF6.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.EF6.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.EF6.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_System.Data.SQLite.Linq.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.Linq.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.Linq.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_System.Data.SQLite.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Data.SQLite.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Data.SQLite.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_allsettings.Designer.cs" Path="[|AI_PROPPATH_DIR_PERBUILD_allsettings.Designer.cs]\[|AI_PROPPATH_FILENAME_PERBUILD_allsettings.Designer.cs]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_allsettings.settings" Path="[|AI_PROPPATH_DIR_PERBUILD_allsettings.settings]\[|AI_PROPPATH_FILENAME_PERBUILD_allsettings.settings]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_juraganarlogo.jpg" Path="[|AI_PROPPATH_DIR_PERBUILD_juraganarlogo.jpg]\[|AI_PROPPATH_FILENAME_PERBUILD_juraganarlogo.jpg]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_juraganarlogo256x256.ico" Path="[|AI_PROPPATH_DIR_PERBUILD_juraganarlogo256x256.ico]\[|AI_PROPPATH_FILENAME_PERBUILD_juraganarlogo256x256.ico]" Type="2" Content="0"/>
@@ -278,7 +285,7 @@
     <ATTRIBUTE name="UsedTheme" value="classic"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
-    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="769" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
@@ -300,5 +307,6 @@
     <ROW ProjectId="{9a54b396-9ef1-43fe-bca1-ad57bfeb57b6}" ProjectName="JuraganAR" OutputGroup="References" OutputFile="System.Data.SQLite.dll"/>
     <ROW ProjectId="{9a54b396-9ef1-43fe-bca1-ad57bfeb57b6}" ProjectName="JuraganAR" OutputGroup="References" OutputFile="DocumentFormat.OpenXml.dll"/>
     <ROW ProjectId="{9a54b396-9ef1-43fe-bca1-ad57bfeb57b6}" ProjectName="JuraganAR" OutputGroup="References" OutputFile="SpreadsheetLight.dll"/>
+    <ROW ProjectId="{9a54b396-9ef1-43fe-bca1-ad57bfeb57b6}" ProjectName="JuraganAR" OutputGroup="ContentOutput" OutputFile="allsettings.Designer.cs"/>
   </COMPONENT>
 </DOCUMENT>
