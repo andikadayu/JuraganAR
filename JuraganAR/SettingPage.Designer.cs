@@ -188,9 +188,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label2.Location = new System.Drawing.Point(28, 430);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 18);
+            this.label2.Size = new System.Drawing.Size(242, 18);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Hapus Kata-Kata(pemisah koma)";
+            this.label2.Text = "Hapus Kata-Kata (Pemisah Enter ↲)";
             // 
             // txtHapusKata
             // 

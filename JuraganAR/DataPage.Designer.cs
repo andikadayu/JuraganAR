@@ -58,7 +58,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.btnClose.Location = new System.Drawing.Point(533, 212);
+            this.btnClose.Location = new System.Drawing.Point(558, 212);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(81, 34);
             this.btnClose.TabIndex = 2;

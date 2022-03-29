@@ -31,6 +31,7 @@ namespace JuraganAR
         private DataParameter _inputparameter;
         private ExportParameter _exportparameter;
         ShopeeHelper shopee = new ShopeeHelper();
+        private int delay = 100;
 
         private void btnData_Click(object sender, EventArgs e)
         {
@@ -119,7 +120,7 @@ namespace JuraganAR
             foreach (string lins in allLinks) {
                     curr++;
                     WorkerScrap.ReportProgress(curr * 100 / counts, string.Format("Proccess Data {0}", curr));
-                    Thread.Sleep(10);
+                    Thread.Sleep(delay);
                     if (lins != "")
                     {
                         try
@@ -173,16 +174,16 @@ namespace JuraganAR
                 {
                     progress = index++ * 100 / total;
                     WorkerExport.ReportProgress(progress);
-                    Thread.Sleep(10);
+                    Thread.Sleep(delay);
                    
-                    if (f % 299 == 0)
+                    if (f % 300 == 0) // limiter loop
                     {
                         try
                         {
                             var sql = new SQLController();
                             var excel = new ExcelController();
-                            var result = sql.read_database("tb_detail", "*", "", "", "", "299", f.ToString());
-                            excel.create_excel("299", f.ToString(), filename, result);
+                            var result = sql.read_database("tb_detail", "*", "", "", "", "300", f.ToString()); // limiter for read database
+                            excel.create_excel("300", f.ToString(), filename, result); // limiter for create excel
                             sql.close_connection();
 
                         }

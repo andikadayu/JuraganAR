@@ -15,7 +15,7 @@ namespace JuraganAR.models
         {
             StringBuilder sb = new StringBuilder(s);
 
-            string[] removes = allsettings.Default.remove_text.ToString().Trim().Split(',');
+            string[] removes = allsettings.Default.remove_text.ToString().Trim().Split(new string[] { "\r\n", "\r", "\n" },StringSplitOptions.None);
             foreach(var rms in removes)
             {
                 if(rms != "" || rms != String.Empty)
@@ -32,7 +32,7 @@ namespace JuraganAR.models
 
             SQLController sql = new SQLController();
 
-            int currents = 5;
+            int currents = 4; // First Column
 
             using (SLDocument sheet = new SLDocument(lokasi_wb))
             {
@@ -41,8 +41,8 @@ namespace JuraganAR.models
                     string[] image = result.GetValue(11).ToString().Replace(@"""", String.Empty).Replace("[", String.Empty).Replace("]", String.Empty).Replace(" ", String.Empty).Replace("\n", String.Empty).Replace("\r", String.Empty).Trim().Split(',');
 
                     sheet.SetCellValue($"A{currents}",String.Empty);
-                    sheet.SetCellValue($"B{currents}", removetext(allsettings.Default.add_first_name + result.GetValue(3).ToString() + allsettings.Default.add_last_name));
-                    sheet.SetCellValue($"C{currents}", removetext(allsettings.Default.add_first_description + result.GetValue(4).ToString() + allsettings.Default.add_last_description));
+                    sheet.SetCellValue($"B{currents}", removetext(allsettings.Default.add_first_name + result.GetValue(3).ToString() + allsettings.Default.add_last_name).Substring(0,70));
+                    sheet.SetCellValue($"C{currents}", removetext(allsettings.Default.add_first_description + result.GetValue(4).ToString() + allsettings.Default.add_last_description).Substring(0,2000));
                     sheet.SetCellValue($"D{currents}", allsettings.Default.kategori);
                     sheet.SetCellValue($"E{currents}", allsettings.Default.weight);
                     sheet.SetCellValue($"F{currents}", allsettings.Default.min_pesan);
