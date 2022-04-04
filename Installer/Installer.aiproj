@@ -28,7 +28,7 @@
       <Name>JuraganAR</Name>
       <Project>{9a54b396-9ef1-43fe-bca1-ad57bfeb57b6}</Project>
       <Private>True</Private>
-      <OutputsToImport>PrimaryOutput;References;ContentOutput;DocumentationOutput;LocalizedResourcesOutput;SymbolsOutput;ComTypeLibraryOutput</OutputsToImport>
+      <OutputsToImport>PrimaryOutput;References;ContentOutput;LocalizedResourcesOutput;ComTypeLibraryOutput</OutputsToImport>
     </ProjectReference>
   </ItemGroup>
   <Target Name="Build">

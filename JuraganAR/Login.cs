@@ -8,6 +8,7 @@ namespace JuraganAR
 {
     public partial class Login : Form
     {
+        models.LogController log = new models.LogController();
         public Login()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace JuraganAR
                 {
                     Console.WriteLine(ef.StackTrace);
                     var status = ef.Message;
+                    log.log_message(ef.Message, ef.StackTrace);
                     MessageBox.Show(status, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

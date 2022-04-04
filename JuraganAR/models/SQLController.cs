@@ -24,6 +24,7 @@ namespace JuraganAR.models
             catch(Exception e)
             {
                 System.Windows.Forms.MessageBox.Show(e.Message);
+                new LogController().log_message(e.Message, e.StackTrace);
                 Console.WriteLine(e.StackTrace);
             }
 

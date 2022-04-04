@@ -3,11 +3,13 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using JuraganAR.models;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace JuraganAR
 {
     public partial class HomePage : Form
     {
+        LogController log = new LogController();
         public HomePage()
         {
             LoginData login = new LoginData();
@@ -114,37 +116,43 @@ namespace JuraganAR
         private void WorkerScrap_DoWork(object sender, DoWorkEventArgs e)
         {
            
-                string link = ((DataParameter)e.Argument).link;
-                string[] allLinks = link.Split(',');
-                int counts = allLinks.Length;
-                int curr = 1;
+            string link = ((DataParameter)e.Argument).link;
+            string[] allLinks = link.Split(',');
+            int counts = allLinks.Length;
+            int curr = 1;
 
-            foreach (string lins in allLinks) {
-                    curr++;
-                    WorkerScrap.ReportProgress(curr * 100 / counts, string.Format("Proccess Data {0}", curr));
-                    Thread.Sleep(delay);
-                    if (lins != "")
+
+            foreach(var lins in allLinks)
+            {
+                if (lins != "")
+                {
+
+                    try
                     {
-                        try
-                        {
-                            string links = lins.Replace(@"""", String.Empty).Replace(" ",String.Empty).Replace("?", ".").Replace("~","-").Replace("-i.", "~");
+                        string links = lins.Replace(@"""", String.Empty).Replace(" ", String.Empty).Replace("?", ".").Replace("~", "-").Replace("-i.", "~");
 
-                            string[] param = links.Split('~');
-                            string[] para = param[1].Split('.');
-                            string shopid = para[0];
-                            string itemid = para[1];
-                            
-                            shopee.shopeeInit(shopid, itemid);
+                        string[] param = links.Split('~');
+                        string[] para = param[1].Split('.');
+                        string shopid = para[0];
+                        string itemid = para[1];
 
-                        }
-                        catch (Exception exs)
-                        {
-                            Console.Write(exs.Message + "\n" + exs.StackTrace);
-                        }
+                        shopee.shopeeInit(shopid, itemid);
+
+                    }
+                    catch (Exception exs)
+                    {
+                        log.log_message(exs.Message, exs.StackTrace);
+                        Console.Write(exs.Message + "\n" + exs.StackTrace);
                     }
                     
+                }
 
-                }       
+                curr++;
+                WorkerScrap.ReportProgress(curr * 100 / counts, string.Format("Proccess Data {0}", curr));
+                Thread.Sleep(delay);
+
+            };
+                
         }
 
         private void WorkerScrap_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -174,10 +182,6 @@ namespace JuraganAR
             {
                 while (f < total)
                 {
-                    progress = index++ * 100 / total;
-                    WorkerExport.ReportProgress(progress);
-                    Thread.Sleep(delay);
-                   
                     if (f % 300 == 0) // limiter loop
                     {
                         try
@@ -191,6 +195,7 @@ namespace JuraganAR
                         }
                         catch (Exception ex)
                         {
+                            log.log_message(ex.Message, ex.StackTrace);
                             Console.WriteLine(ex.StackTrace);
                             MessageBox.Show(ex.Message);
                         }
@@ -199,12 +204,16 @@ namespace JuraganAR
                     
 
                     f++;
-                   
-                    
+                    progress = index++ * 100 / total;
+                    WorkerExport.ReportProgress(progress);
+                    Thread.Sleep(delay);
+
+
                 }
             }
             catch(Exception ex)
             {
+                log.log_message(ex.Message, ex.StackTrace);
                 Console.Write(ex.StackTrace);
             }
         }

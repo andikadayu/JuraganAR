@@ -7,6 +7,8 @@ namespace JuraganAR.models
 {
     class ShopeeHelper
     {
+        LogController log = new LogController();
+
         public void shopeeInit(string shopid,string itemid)
         {
             ServicePointManager.Expect100Continue = true;
@@ -32,7 +34,8 @@ namespace JuraganAR.models
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message+" "+shopid+" "+itemid+"\n"+ex.StackTrace);
+                log.log_message(ex.Message + " at " + shopid + "," + itemid, ex.StackTrace);
+                Console.WriteLine(ex.Message + " at " + shopid + " " + itemid + "\n"+ex.StackTrace);
             }
         }
 
