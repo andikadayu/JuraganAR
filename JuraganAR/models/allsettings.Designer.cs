@@ -215,5 +215,29 @@ namespace JuraganAR.models {
                 this["with_markup"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string user_agent {
+            get {
+                return ((string)(this["user_agent"]));
+            }
+            set {
+                this["user_agent"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public string delay_scrap {
+            get {
+                return ((string)(this["delay_scrap"]));
+            }
+            set {
+                this["delay_scrap"] = value;
+            }
+        }
     }
 }

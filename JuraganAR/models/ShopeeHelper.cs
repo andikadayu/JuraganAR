@@ -14,6 +14,7 @@ namespace JuraganAR.models
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             int version = new Random().Next(7, 999999999);
+            string userAgent = null;
             try
             {
 
@@ -21,7 +22,10 @@ namespace JuraganAR.models
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.UseDefaultCredentials = true;
-                httpRequest.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
+                httpRequest.Proxy.Credentials = CredentialCache.DefaultCredentials;
+                httpRequest.Accept = @"application/json";
+                httpRequest.UserAgent = allsettings.Default.user_agent;
+                userAgent = httpRequest.UserAgent;
                 var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
@@ -34,7 +38,7 @@ namespace JuraganAR.models
             }
             catch (Exception ex)
             {
-                log.log_message(ex.Message + " at " + shopid + "," + itemid, ex.StackTrace);
+                log.log_message($"{ex.Message} at {shopid} , {itemid}  with User Agent {userAgent}", ex.StackTrace);
                 Console.WriteLine(ex.Message + " at " + shopid + " " + itemid + "\n"+ex.StackTrace);
             }
         }

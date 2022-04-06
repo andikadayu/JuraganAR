@@ -35,7 +35,6 @@ namespace JuraganAR
         private DataParameter _inputparameter;
         private ExportParameter _exportparameter;
         ShopeeHelper shopee = new ShopeeHelper();
-        private int delay = 100;
 
         private void btnData_Click(object sender, EventArgs e)
         {
@@ -149,7 +148,7 @@ namespace JuraganAR
 
                 curr++;
                 WorkerScrap.ReportProgress(curr * 100 / counts, string.Format("Proccess Data {0}", curr));
-                Thread.Sleep(delay);
+                Thread.Sleep(int.Parse(allsettings.Default.delay_scrap));
 
             };
                 
@@ -206,7 +205,7 @@ namespace JuraganAR
                     f++;
                     progress = index++ * 100 / total;
                     WorkerExport.ReportProgress(progress);
-                    Thread.Sleep(delay);
+                    Thread.Sleep(100);
 
 
                 }

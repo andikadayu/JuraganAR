@@ -34,6 +34,9 @@ namespace JuraganAR
                 comboRumus.SelectedItem = "Murah";
             }
 
+            txtUserAgent.Text = allsettings.Default.user_agent;
+            txtDelayScrap.Text = allsettings.Default.delay_scrap;
+
 
         }
 
@@ -64,9 +67,10 @@ namespace JuraganAR
 
             allsettings.Default.with_markup = cbMarkup.Checked;
             allsettings.Default.with_rumus = cbRumus.Checked;
-
            
             allsettings.Default.rumus_value = comboRumus.SelectedItem.ToString();
+            allsettings.Default.user_agent = txtUserAgent.Text;
+            allsettings.Default.delay_scrap = txtDelayScrap.Text;
             
 
             allsettings.Default.Save();
