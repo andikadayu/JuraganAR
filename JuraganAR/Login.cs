@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using RestSharp;
 
 namespace JuraganAR
 {
@@ -25,7 +26,7 @@ namespace JuraganAR
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
+        }        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -36,17 +37,14 @@ namespace JuraganAR
                 
                 try
                 {
-
-                    var url = "https://juraganar.com/api/login_desktop.php?email="+email+"&password="+password;
-
-                    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-
-                    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                    {
-                        var result = streamReader.ReadToEnd();
-
-                        var res = JObject.Parse(result);
+                    var client = new RestClient("https://juraganar.com/api/");
+                    var request = new RestRequest("login_desktop.php", Method.GET);
+                    request.AddHeader("Content-Type", "application/json");
+                    request.AddQueryParameter("email", email);
+                    request.AddQueryParameter("password", password);
+                    var result = client.Execute(request);
+                    
+                        var res = JObject.Parse(result.Content);
 
                         var status = res.GetValue("status").ToString();
                         var ids = res.GetValue("ids").ToString();
@@ -70,7 +68,7 @@ namespace JuraganAR
                             MessageBox.Show("Invalid Email or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
-                    }
+                    
 
                 }
                 catch (Exception ef)

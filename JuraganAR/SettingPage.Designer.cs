@@ -62,8 +62,6 @@
             this.txtMinStok = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtMinHarga = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtUserAgent = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtDelayScrap = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -423,32 +421,12 @@
             this.txtMinHarga.Size = new System.Drawing.Size(176, 24);
             this.txtMinHarga.TabIndex = 34;
             // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label16.Location = new System.Drawing.Point(525, 430);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(81, 18);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "User Agent";
-            // 
-            // txtUserAgent
-            // 
-            this.txtUserAgent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUserAgent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtUserAgent.Location = new System.Drawing.Point(528, 457);
-            this.txtUserAgent.Name = "txtUserAgent";
-            this.txtUserAgent.Size = new System.Drawing.Size(649, 24);
-            this.txtUserAgent.TabIndex = 36;
-            // 
             // label17
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.Location = new System.Drawing.Point(525, 505);
+            this.label17.Location = new System.Drawing.Point(525, 430);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(214, 18);
             this.label17.TabIndex = 37;
@@ -458,7 +436,7 @@
             // 
             this.txtDelayScrap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDelayScrap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtDelayScrap.Location = new System.Drawing.Point(528, 537);
+            this.txtDelayScrap.Location = new System.Drawing.Point(528, 457);
             this.txtDelayScrap.Name = "txtDelayScrap";
             this.txtDelayScrap.Size = new System.Drawing.Size(176, 24);
             this.txtDelayScrap.TabIndex = 38;
@@ -471,8 +449,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.txtDelayScrap);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtUserAgent);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtMinHarga);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtMinStok);
@@ -552,8 +528,6 @@
         private System.Windows.Forms.TextBox txtMinStok;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtMinHarga;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtUserAgent;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtDelayScrap;
     }
