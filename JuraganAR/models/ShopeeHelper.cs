@@ -10,7 +10,7 @@ namespace JuraganAR.models
     {
         LogController log = new LogController();
 
-        public static string generateUserAgents(int len = 10)
+        public string generateUserAgents(int len = 10)
         {
             Random r = new Random();
             string[] consonants = { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "l", "n", "p", "q", "r", "s", "sh", "zh", "t", "v", "w", "x" };
@@ -29,7 +29,7 @@ namespace JuraganAR.models
             return UppercaseFirst(Name);
         }
 
-        static string UppercaseFirst(string s)
+        public string UppercaseFirst(string s)
         {
             // Check for empty string.
             if (string.IsNullOrEmpty(s))
@@ -40,7 +40,7 @@ namespace JuraganAR.models
             return char.ToUpper(s[0]) + s.Substring(1);
         }
 
-        public static string generateVersion()
+        public string generateVersion()
         {
             Random random = new Random();
             int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -51,15 +51,15 @@ namespace JuraganAR.models
             return version;
         }
 
-        public void shopeeInit(string shopid,string itemid)
+        public void shopeeInits(string shopid,string itemid)
         {
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             int version = new Random().Next(7, 999999999);
             string userAgent = null;
+            string userAgents = generateUserAgents(15) + "/" + generateVersion();
             try
             {
-                var userAgents = generateUserAgents(15) + "/" + generateVersion();
                 var client = new RestClient("https://shopee.co.id/api/v4/item/");
                 client.Proxy.Credentials = CredentialCache.DefaultNetworkCredentials;
                 client.UserAgent = userAgents;
@@ -90,12 +90,13 @@ namespace JuraganAR.models
             }
         }
 
-        public void shopeeInits(string shopid,string itemid)
+        public void shopeeInit(string shopid,string itemid)
         {
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             int version = new Random().Next(7, 999999999);
             string userAgent = null;
+            string userAgents = generateUserAgents(15) + "/" + generateVersion();
             try
             {
 
@@ -105,7 +106,7 @@ namespace JuraganAR.models
                 httpRequest.UseDefaultCredentials = true;
                 httpRequest.Proxy.Credentials = CredentialCache.DefaultCredentials;
                 httpRequest.Accept = @"application/json";
-                httpRequest.UserAgent = allsettings.Default.user_agent;
+                httpRequest.UserAgent = userAgents;
                 userAgent = httpRequest.UserAgent;
                 var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
