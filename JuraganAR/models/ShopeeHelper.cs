@@ -90,7 +90,7 @@ namespace JuraganAR.models
             }
         }
 
-        public void shopeeInit(string shopid,string itemid)
+        public void shopeeInit(string shopid,string itemid,string proxy = null,string fullLink = null)
         {
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -103,10 +103,16 @@ namespace JuraganAR.models
                 var url = "https://shopee.co.id/api/v4/item/get?itemid=" + itemid + "&shopid=" + shopid + "&version=" + version;
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "GET";
+                httpRequest.Credentials = null;
                 httpRequest.UseDefaultCredentials = true;
-                httpRequest.Proxy.Credentials = CredentialCache.DefaultCredentials;
-                httpRequest.Accept = @"application/json";
+                httpRequest.Proxy.Credentials = CredentialCache.DefaultNetworkCredentials;
                 httpRequest.UserAgent = userAgents;
+                httpRequest.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
+                httpRequest.Referer = "shopee.co.id";
+                httpRequest.Accept = "*/*";
+                httpRequest.AllowWriteStreamBuffering = false;
+                
                 userAgent = httpRequest.UserAgent;
                 var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -117,10 +123,12 @@ namespace JuraganAR.models
 
                     shopeeDetail(res);
                 }
+                httpResponse.Close();
             }
             catch (Exception ex)
             {
                 log.log_message($"{ex.Message} at {shopid} , {itemid}  with User Agent {userAgent}", ex.StackTrace);
+                log.log_advance(fullLink);
                 Console.WriteLine(ex.Message + " at " + shopid + " " + itemid + "\n"+ex.StackTrace);
             }
         }

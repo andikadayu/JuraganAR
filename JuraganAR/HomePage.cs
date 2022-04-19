@@ -118,14 +118,12 @@ namespace JuraganAR
             string link = ((DataParameter)e.Argument).link;
             string[] allLinks = link.Split(',');
             int counts = allLinks.Length;
-            int curr = 1;
-
+            int curr = 1;            
 
             foreach(var lins in allLinks)
             {
                 if (lins != "")
                 {
-
                     try
                     {
                         string links = lins.Replace(@"""", String.Empty).Replace(" ", String.Empty).Replace("?", ".").Replace("~", "-").Replace("-i.", "~");
@@ -134,8 +132,8 @@ namespace JuraganAR
                         string[] para = param[1].Split('.');
                         string shopid = para[0];
                         string itemid = para[1];
-
-                        shopee.shopeeInit(shopid, itemid);
+                        
+                        shopee.shopeeInit(shopid, itemid,null,links);
 
                     }
                     catch (Exception exs)

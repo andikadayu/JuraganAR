@@ -30,5 +30,41 @@ namespace JuraganAR.models
             w.WriteLine("---------------------------------------------------------------------------");
         }
 
+        public void log_advance(string message)
+        {
+            string dateNOW = DateTime.Now.ToString("dd-MM-yyyy");
+            string dateFull = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+            string log_location = Path.GetFullPath($"log/shopeeErr-{dateNOW}.txt");
+
+            if (File.Exists(log_location))
+            {
+                using (StreamWriter w = File.AppendText(log_location))
+                {
+                    advance(message, w,false);
+                    w.Close();
+                }
+            }
+            else
+            {
+                using (StreamWriter w = File.AppendText(log_location))
+                {
+                    advance(message, w,true);
+                    w.Close();
+                }
+            }
+        }
+
+        private void advance(string message,TextWriter w,bool first)
+        {
+            if (first)
+            {
+                w.Write(message);
+            }
+            else
+            {
+                w.Write($",{message}");
+            }
+        }
+
     }
 }
