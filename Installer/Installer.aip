@@ -58,10 +58,10 @@
     <ROW Property="AiPreventAutoPin" Value="System.AppUserModel.ExcludeFromShowInNewInstall"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="Karpeldevtech"/>
-    <ROW Property="ProductCode" Value="1033:{AE0A5174-4AE6-48CB-89B1-98D36CAEFDB8} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{6D7FE322-A025-4DDF-9AB7-66D93164F6E7} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="JuraganAR"/>
-    <ROW Property="ProductVersion" Value="1.0.0.8"/>
+    <ROW Property="ProductVersion" Value="1.0.0.9"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{6EC66E73-3579-4869-8DB9-3707CEFC48C6}"/>

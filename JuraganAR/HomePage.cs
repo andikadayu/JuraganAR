@@ -132,8 +132,9 @@ namespace JuraganAR
                         string[] para = param[1].Split('.');
                         string shopid = para[0];
                         string itemid = para[1];
-                        
-                        shopee.shopeeInit(shopid, itemid,null,links);
+
+                        //shopee.shopeeInit(shopid, itemid,null,links);
+                        shopee.shopeeInitsss(shopid, itemid, null, lins);
 
                     }
                     catch (Exception exs)

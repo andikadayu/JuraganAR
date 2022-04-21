@@ -3,12 +3,14 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
 using RestSharp;
+using System.Net.Http;
 
 namespace JuraganAR.models
 {
     class ShopeeHelper
     {
         LogController log = new LogController();
+        static readonly HttpClient client = new HttpClient();
 
         public string generateUserAgents(int len = 10)
         {
@@ -88,6 +90,49 @@ namespace JuraganAR.models
                 log.log_message($"{ex.Message} at {shopid} , {itemid}  with User Agent {userAgent}", ex.StackTrace);
                 Console.WriteLine(ex.Message + " at " + shopid + " " + itemid + "\n" + ex.StackTrace);
             }
+        }
+
+        public async void shopeeInitsss(string shopid, string itemid, string proxy = null, string fullLink = null)
+        {
+            int version = new Random().Next(7, 999999999);
+            string userAgents = generateUserAgents(15) + "/" + generateVersion();
+            try
+            {
+                var url = "https://shopee.co.id/api/v4/item/get?itemid=" + itemid + "&shopid=" + shopid + "&version=" + version;
+
+                // set Default Header
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("user-agent", userAgents);
+                client.DefaultRequestHeaders.Add("authority", "shopee.co.id");
+                client.DefaultRequestHeaders.Add("accept", "application/json");
+                client.DefaultRequestHeaders.Add("accept-language", "en-GB,en;q=0.9");
+                client.DefaultRequestHeaders.Add("sec-fetch-dest", "document");
+                client.DefaultRequestHeaders.Add("sec-fetch-mode", "navigate");
+                client.DefaultRequestHeaders.Add("sec-fetch-site", "none");
+                client.DefaultRequestHeaders.Add("sec-fetch-user", "?1");
+                client.DefaultRequestHeaders.Add("sec-gpc", "1");
+                client.DefaultRequestHeaders.Add("upgrade-insecure-requests", "1");
+
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(responseBody);
+
+                var res = JObject.Parse(responseBody);
+
+                shopeeDetail(res);
+
+                response.Dispose();
+                
+            }
+            catch (Exception ex)
+            {
+                log.log_message($"{ex.Message} at {shopid} , {itemid}  with User Agent {userAgents}", ex.StackTrace);
+                log.log_advance(fullLink);
+                Console.WriteLine(ex.Message + " at " + shopid + " " + itemid + "\n" + ex.StackTrace);
+            }
+
         }
 
         public void shopeeInit(string shopid,string itemid,string proxy = null,string fullLink = null)
