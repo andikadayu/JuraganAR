@@ -183,6 +183,7 @@
       <DependentUpon>allsettings.settings</DependentUpon>
     </Compile>
     <Compile Include="models\ExcelController.cs" />
+    <Compile Include="models\IPController.cs" />
     <Compile Include="models\LogController.cs" />
     <Compile Include="models\RumusHelper.cs" />
     <Compile Include="models\sharedsession.Designer.cs">

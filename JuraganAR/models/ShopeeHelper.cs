@@ -117,7 +117,6 @@ namespace JuraganAR.models
 
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseBody);
 
                 var res = JObject.Parse(responseBody);
 

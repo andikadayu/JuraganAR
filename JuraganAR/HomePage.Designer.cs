@@ -43,6 +43,9 @@
             this.progExport = new System.Windows.Forms.ProgressBar();
             this.WorkerScrap = new System.ComponentModel.BackgroundWorker();
             this.WorkerExport = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblIP = new System.Windows.Forms.Label();
+            this.lblRefresh = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -198,12 +201,49 @@
             this.WorkerExport.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.WorkerExport_ProgressChanged);
             this.WorkerExport.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WorkerExport_RunWorkerCompleted);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label3.Location = new System.Drawing.Point(26, 641);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Your IP : ";
+            // 
+            // lblIP
+            // 
+            this.lblIP.AutoSize = true;
+            this.lblIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblIP.Location = new System.Drawing.Point(100, 641);
+            this.lblIP.Name = "lblIP";
+            this.lblIP.Size = new System.Drawing.Size(116, 18);
+            this.lblIP.TabIndex = 13;
+            this.lblIP.Text = "123.123.123.123";
+            // 
+            // lblRefresh
+            // 
+            this.lblRefresh.AutoSize = true;
+            this.lblRefresh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRefresh.Location = new System.Drawing.Point(231, 633);
+            this.lblRefresh.Name = "lblRefresh";
+            this.lblRefresh.Size = new System.Drawing.Size(31, 31);
+            this.lblRefresh.TabIndex = 14;
+            this.lblRefresh.Text = "↺";
+            this.lblRefresh.Click += new System.EventHandler(this.lblRefresh_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblRefresh);
+            this.Controls.Add(this.lblIP);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.progExport);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.txtFileName);
@@ -243,5 +283,8 @@
         private System.Windows.Forms.ProgressBar progExport;
         private System.ComponentModel.BackgroundWorker WorkerScrap;
         private System.ComponentModel.BackgroundWorker WorkerExport;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblIP;
+        private System.Windows.Forms.Label lblRefresh;
     }
 }

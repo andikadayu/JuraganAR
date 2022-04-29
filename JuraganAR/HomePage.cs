@@ -20,6 +20,7 @@ namespace JuraganAR
                 new Login().Show();
                 this.Hide();
             }
+            setIPGlobal();
         }
 
         struct DataParameter
@@ -228,6 +229,18 @@ namespace JuraganAR
             progExport.Value = 0;
             progExport.Update();
             progExport.Visible = false;
+        }
+
+        private void lblRefresh_Click(object sender, EventArgs e)
+        {
+            setIPGlobal();
+        }
+
+        private async void setIPGlobal()
+        {
+            IPController IPC = new IPController();
+            string ip = await IPC.getCurrentIP();
+            lblIP.Text = ip;
         }
     }
 }
